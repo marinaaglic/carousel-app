@@ -1,13 +1,14 @@
 import React from 'react'
-import SlideData from '../../utils/SlideData'
-import Image from 'next/image'
+import { ImageProps } from 'next/image'
+import { Slides } from '../../utils/SlideData'
+import ImageWrapper from '../reusable/ImageWrapper'
 
 export default function SliderContent() {
   return (
     <div>
-      {SlideData.map((slide, index) => {
-        return <Image key={index} src={slide.url} alt={slide.title} />
-      })}
+      {Slides.map((slide: ImageProps, index) => (
+        <ImageWrapper key={index} {...slide} />
+      ))}
     </div>
   )
 }

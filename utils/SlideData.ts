@@ -1,36 +1,30 @@
 import { StaticImageData } from 'next/image'
+import { ImageProps } from 'next/image'
 import First from '../public/image1.jpg'
 import Second from '../public/image2.jpg'
 import Third from '../public/image3.jpg'
 import Fourth from '../public/image4.jpg'
 import Fifth from '../public/image5.jpg'
 
-interface ISlide {
-  title: string
-  url: StaticImageData
-}
-
-const Slides: ISlide[] = [
+export const Slides: ImageProps[] = [
   {
-    title: 'First slide',
-    url: First,
+    src: First,
+    alt: 'First slide',
   },
   {
-    title: 'Second slide',
-    url: Second,
+    src: Second,
+    alt: 'Second slide',
   },
   {
-    title: 'Third slide',
-    url: Third,
+    src: Third,
+    alt: 'Third slide',
   },
   {
-    title: 'Fourth slide',
-    url: Fourth,
+    src: Fourth,
+    alt: 'Fourth slide',
   },
   {
-    title: 'Fifth slide',
-    url: Fifth,
+    src: Fifth,
+    alt: 'Fifth slide',
   },
 ]
-
-export default Slides
