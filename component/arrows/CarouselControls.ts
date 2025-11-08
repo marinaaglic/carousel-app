@@ -1,4 +1,4 @@
-export type ArrowsType = {
+export interface IArrowsProps {
   prevSlide: () => {}
   nextSlide: () => {}
 }
