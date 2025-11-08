@@ -1,4 +1,4 @@
 export interface IArrowsProps {
-  prevSlide: () => {}
-  nextSlide: () => {}
+  onPrevClick: () => void
+  onNextClick: () => void
 }

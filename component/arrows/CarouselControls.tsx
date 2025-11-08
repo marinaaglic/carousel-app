@@ -1,13 +1,13 @@
 import { IArrowsProps } from './CarouselControls'
 
 export default function CarouselControls({
-  prevSlide,
-  nextSlide,
+  onPrevClick,
+  onNextClick,
 }: IArrowsProps) {
   return (
     <div>
-      <span onClick={prevSlide}>&#10094;</span>
-      <span onClick={nextSlide}>&#10095;</span>
+      <span onClick={onPrevClick}>&#10094;</span>
+      <span onClick={onNextClick}>&#10095;</span>
     </div>
   )
 }
