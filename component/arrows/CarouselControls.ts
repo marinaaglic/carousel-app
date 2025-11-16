@@ -1,4 +1,4 @@
-export interface IArrowsProps {
+export interface ICarouselControlsProps {
   onPrevClick: () => void
   onNextClick: () => void
 }

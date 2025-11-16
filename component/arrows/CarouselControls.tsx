@@ -1,9 +1,9 @@
-import { IArrowsProps } from './CarouselControls'
+import { ICarouselControlsProps } from './CarouselControls'
 
 export default function CarouselControls({
   onPrevClick,
   onNextClick,
-}: IArrowsProps) {
+}: ICarouselControlsProps) {
   return (
     <div>
       <span onClick={onPrevClick}>&#10094;</span>
