@@ -1,4 +1,4 @@
-import { ICarouselControlsProps } from './CarouselControls'
+import { ICarouselControlsProps } from './CarouselControls.ts'
 
 export default function CarouselControls({
   onPrevClick,
