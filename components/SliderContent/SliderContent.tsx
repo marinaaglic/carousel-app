@@ -3,7 +3,12 @@ import { ImageProps } from 'next/image'
 import { Slides } from '../../utils/SlideData.ts'
 import ImageWrapper from '../reusable/ImageWrapper.tsx'
 
-export default function SliderContent() {
+interface SliderContentProps {
+  currentIndex: number
+}
+
+export default function SliderContent({ currentIndex }: SliderContentProps) {
+  const slide = Slides[currentIndex]
   return (
     <div>
       {Slides.map((slide: ImageProps, index) => (

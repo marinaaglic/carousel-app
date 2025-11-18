@@ -2,6 +2,8 @@
 import CarouselControls from '../CarouselControls/CarouselControls.tsx'
 import { useState } from 'react'
 import { Slides } from '@/utils/SlideData.ts'
+import SliderContent from '../SliderContent/SliderContent.tsx'
+import styles from './ImageCarousel.module.css'
 
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -19,11 +21,18 @@ export default function ImageCarousel() {
   if (currentIndex > Slides.length - 3) {
     console.log(currentIndex)
     setCurrentIndex(0)
-    console.log('hi')
   }
   return (
     <div>
-      <CarouselControls onPrevClick={handlePrevious} onNextClick={handleNext} />
+      <div className={styles.container}>
+        <SliderContent currentIndex={currentIndex} />
+      </div>
+      <div>
+        <CarouselControls
+          onPrevClick={handlePrevious}
+          onNextClick={handleNext}
+        />
+      </div>
     </div>
   )
 }
