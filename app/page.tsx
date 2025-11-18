@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import SliderContent from '@/components/SliderContent/SliderContent'
 
 export default function Home() {
   return (
