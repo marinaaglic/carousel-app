@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import { ImageProps } from 'next/image'
 import { Slides } from '../../utils/SlideData.ts'
 import ImageWrapper from '../reusable/ImageWrapper.tsx'
+import CarouselControls from '../CarouselControls/CarouselControls.tsx'
+import styles from './ImageCarousel.module.css'
 
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
@@ -18,10 +19,16 @@ export default function ImageCarousel() {
   }
   const slide = Slides[currentIndex]
   return (
-    <div>
-      {Slides.map((slide: ImageProps, index) => (
-        <ImageWrapper key={index} {...slide} />
-      ))}
+    <div className={styles.carouselContainer}>
+      <div className={styles.imageWrapper}>
+        <ImageWrapper {...Slides[currentIndex]} />
+      </div>
+      <div className={styles.controlsContainer}>
+        <CarouselControls
+          onPrevClick={handlePrevious}
+          onNextClick={handleNext}
+        />
+      </div>
     </div>
   )
 }
