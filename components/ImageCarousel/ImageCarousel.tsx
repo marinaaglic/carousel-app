@@ -17,7 +17,7 @@ export default function ImageCarousel() {
       (prevIndex) => (prevIndex - 1 + Slides.length) % Slides.length
     )
   }
-  const slide = Slides[currentIndex]
+
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.imageWrapper}>
