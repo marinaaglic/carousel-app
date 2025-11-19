@@ -4,7 +4,7 @@ import { ImageProps } from 'next/image'
 import { Slides } from '../../utils/SlideData.ts'
 import ImageWrapper from '../reusable/ImageWrapper.tsx'
 
-export default function SliderContent() {
+export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   const handleNext = () => {
