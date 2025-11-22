@@ -1,12 +1,37 @@
 .carouselContainer {
-  width: 400px;
-  max-width: 600px;
-  height: 550px;
+  width: 600px;
   margin: 40px auto;
   position: relative;
-  overflow: hidden;
-  border-radius: 16px;
+  overflow: visible;
+}
+
+.imagesRow {
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.inactiveImage {
+  width: 150px;
+  height: 150px;
+  opacity: 0.6;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  transform: scale(1);
+}
+
+.activeImage {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transform: scale(1.25);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.controlsContainer {
+  margin-top: 1rem;
 }

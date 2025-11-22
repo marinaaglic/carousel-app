@@ -20,8 +20,17 @@ export default function ImageCarousel() {
 
   return (
     <div className={styles.carouselContainer}>
-      <div className={styles.imageWrapper}>
-        <ImageWrapper {...Slides[currentIndex]} />
+      <div className={styles.imagesRow}>
+        {Slides.map((slide, index) => (
+          <div
+            key={index}
+            className={
+              index === currentIndex ? styles.activeImage : styles.inactiveImage
+            }
+          >
+            <ImageWrapper {...slide} />
+          </div>
+        ))}
       </div>
       <div className={styles.controlsContainer}>
         <CarouselControls
